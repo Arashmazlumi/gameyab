@@ -1,29 +1,66 @@
-* {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
-  min-width: 320px;
-  background: #08090e;
+  scroll-behavior: smooth;
+  background: #100e17;
 }
 
 body {
+  margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  margin: 0;
+  background: #100e17;
+  color: #f9fafb;
+  font-family: Tahoma, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 button,
 input,
-select,
-textarea {
-  font-family: inherit;
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
 #root {
   min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  overflow-wrap: anywhere;
+}
+
+.app-fa {
+  direction: rtl;
+  text-align: right;
+}
+
+.app-en {
+  direction: ltr;
+  text-align: left;
 }
